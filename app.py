@@ -48,9 +48,9 @@ re_l = re.compile(r'[^a-z ]+')
 
 
 # load model
-model = load_model('model.h5')
+model = load_model('/home/Pal78/sent_ml/model.h5')
 # load tokenizer
-with open('tokenizer.pickle','rb') as handle:
+with open('/home/Pal78/sent_ml/tokenizer.pickle','rb') as handle:
     tokenizer = pickle.load(handle)
 
 
