@@ -5,7 +5,7 @@
 
 
 import nltk
-import contractions
+#import contractions
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
 from nltk.corpus import stopwords, words
@@ -335,7 +335,8 @@ def pre_process_lem(text):
     # expand contractions
     expand_words = []
     for wd in text.split():
-        expand_words.append(contractions.fix(wd))
+        #expand_words.append(contractions.fix(wd))
+        expand_words.append(wd)
     text = ' '.join(expand_words)
     # translate abbreviation
     translate_words = []
@@ -389,6 +390,12 @@ def process_api():
             label = 'NEGATIVE'
         results[keys] = [label,str(score)]
     return jsonify(results)
+
+
+# In[27]:
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 # In[ ]:
