@@ -6,6 +6,7 @@
 
 import nltk
 nltk.download('wordnet')
+nltk.download('omw-1.4')
 #import contractions
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
