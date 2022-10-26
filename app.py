@@ -5,6 +5,7 @@
 
 
 import nltk
+nltk.download('wordnet')
 #import contractions
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
