@@ -9,13 +9,12 @@ import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
 from nltk.corpus import stopwords, words
-from nltk.stem.snowball import SnowballStemmer
 import string
 import re
 import flask
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
-from keras.utils import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 
 
@@ -33,7 +32,6 @@ tk = TweetTokenizer(reduce_len=True)
 stop_words_e = set(stopwords.words('english'))
 words_e = set(words.words())
 lemmatizer = WordNetLemmatizer()
-stemmer = SnowballStemmer('english', ignore_stopwords=True)
 # regex compilation to be faster
 # remove URLs
 re_url = re.compile(r'https?://[^ ]+')
