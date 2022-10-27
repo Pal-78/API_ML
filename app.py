@@ -5,8 +5,6 @@
 
 
 import nltk
-nltk.download('wordnet')
-nltk.download('omw-1.4')
 #import contractions
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
@@ -50,9 +48,9 @@ re_l = re.compile(r'[^a-z ]+')
 
 
 # load model
-model = load_model('/home/Pal78/sent_ml/model.h5')
+model = load_model('model.h5')
 # load tokenizer
-with open('/home/Pal78/sent_ml/tokenizer.pickle','rb') as handle:
+with open('tokenizer.pickle','rb') as handle:
     tokenizer = pickle.load(handle)
 
 
@@ -396,8 +394,8 @@ def process_api():
 
 # In[27]:
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
 
 
 # In[ ]:
