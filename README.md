@@ -1,7 +1,6 @@
 # API_ML
-sentiment for pythonanywhere
+results for pythonanywhere
 
-
-API on Heroku
+API posted on Heroku
 
 input RGB picture output 8 categories mask
