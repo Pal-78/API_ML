@@ -1,3 +1,6 @@
 # API_ML
-sentiment for pythonanywhere
-Get a 8 categories mask from RGB picture thanks to trained model
+results for pythonanywhere
+
+API posted on Heroku
+
+input RGB picture output 8 categories mask
